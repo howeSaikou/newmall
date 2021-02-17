@@ -2,7 +2,7 @@
   <div id="home">
       <nav-bar class="home-nav">
         <template v-slot:center>
-          购物车
+          购物商城
         </template>
       </nav-bar>
       <!-- 偷天换日 当滚动到一定位置时显示,盖在原来的tab-control上面,造成没有没滚下去的表面 -->
@@ -73,6 +73,9 @@ export default {
       this.getHomeGoods('pop')
       this.getHomeGoods('new')
       this.getHomeGoods('sell')
+    },
+    activated(){
+      this.$refs.scroll.refresh()
     },
     computed:{
       showGoods(){

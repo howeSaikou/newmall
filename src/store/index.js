@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+import getters from './getters'
 import mutations from './mutations.js'
 import actions from './actions.js'
 
@@ -25,5 +26,6 @@ export default createStore({
     //     }
     // }
     actions,
+    getters,
     modules: {}
 })
