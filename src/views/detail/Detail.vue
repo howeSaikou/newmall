@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import {debounce} from 'common/utils.js'
 import DetailNavBar from './childcomps/DetailNavBar.vue'
 import DetailSwiper from './childcomps/DetailSwiper.vue'
 import DetailBaseInfo from './childcomps/DetailBaseInfo.vue'
@@ -46,7 +47,7 @@ export default {
           recommends:[],
           themeTopYs:[],
           currentIndex:0,
-          // getThemeTopY:null
+          getThemeTopY:null,
           isShowBackTop: false,
       }
   },
@@ -66,12 +67,7 @@ export default {
   methods:{
     detailImgLoad(){
       this.$refs.detailScroll.refresh()
-      this.themeTopYs=[]  
-      this.themeTopYs.push(0)
-      this.themeTopYs.push(this.$refs.params.$el.offsetTop)
-      this.themeTopYs.push(this.$refs.comment.$el.offsetTop)
-      this.themeTopYs.push(this.$refs.recommends.$el.offsetTop)
-      this.themeTopYs.push(Number.MAX_VALUE)
+      this.getThemeTopY()
     },
     backClick() {
       this.$refs.detailScroll.scrollTo(0, 0)
@@ -155,14 +151,16 @@ export default {
     })
     */
     // 4、对getThemeTopY赋值（对this.themeTopYs赋值的操作进行防抖）
-    // this.getThemeTopY=debouce(()=>{
-    //   this.themeTopYs=[]  
-    //   this.themeTopYs.push(0)
-    //   this.themeTopYs.push(this.$refs.params.$el.offsetTOP)
-    //   this.themeTopYs.push(this.$refs.comment.$el.offsetTOP)
-    //   this.themeTopYs.push(this.$refs.recommends.$el.offsetTOP)
-    //   console.log(this.themeTopYs);
-    // })
+    this.getThemeTopY=debounce(()=>{
+      this.themeTopYs=[]  
+      this.themeTopYs.push(0)
+      this.themeTopYs.push(this.$refs.params.$el.offsetTop)
+      this.themeTopYs.push(this.$refs.comment.$el.offsetTop)
+      this.themeTopYs.push(this.$refs.recommends.$el.offsetTop)
+      this.themeTopYs.push(Number.MAX_VALUE)
+
+      console.log(this.themeTopYs);
+    })
   }
     
     
