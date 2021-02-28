@@ -19,7 +19,7 @@ export default {
     computed:{
         isActive(){
             // 当前路由路径是否包含tarbaritem的link，不等于-1为true
-            return this.$route.path.indexOf(this.link)!==-1
+            return this.$route.path.indexOf(this.link) !== -1
         },
         activeStyle(){
             return this.isActive ? {color:this.activeColor} : {}

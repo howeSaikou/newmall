@@ -1,16 +1,21 @@
 <template>
-  <swiper>
+  <div class="block">
+    <el-carousel trigger="click" indicator-position="none" autoplay="true" arrow="always">
+      <el-carousel-item class="D-swiper-item" v-for="item in topImages" :key="item">
+        <img :src="item" alt="">
+      </el-carousel-item>
+    </el-carousel>
+  </div>
+  <!-- <swiper>
       <swiper-item v-for="item in topImages" :key="item" class="swiper-item">
               <img :src="item" alt="">
       </swiper-item>
-  </swiper>
+  </swiper> -->
 </template>
 
 <script>
-import Swiper from 'components/common/swiper/Swiper.vue'
-import SwiperItem from 'components/common/swiper/SwiperItem.vue'
+
 export default {
-  components: { Swiper, SwiperItem },
     props:{
         topImages:{
             type:Array,
@@ -23,8 +28,11 @@ export default {
 </script>
 
 <style>
-.swiper-item{
+.D-swiper-item {
     height: 300px;
-    overflow: hidden;
 }
+.D-swiper-item img{
+    width: 100%;
+}
+
 </style>

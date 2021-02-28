@@ -2,7 +2,7 @@
 <div id="category">
   <nav-bar class="nav-bar"><template v-slot:center>商品分类</template></nav-bar>
   <div class="category-container">
-    <category-menu class="menu" :categoryList="categoryList" @getSubcategory="getSubcategory" ></category-menu>
+    <category-menu class="menu" :categoryList="categoryList" @getSubcategory="categoryChange" ></category-menu>
     <scroll class="content">
         <category-content class="category-content"  :categoryContent="categoryContent"></category-content>
     </scroll>
@@ -27,13 +27,16 @@ export default {
         return{
             categoryList:[],
             categoryContent:[],
-            index:0
+            currentIndex:0
         }
     },
     created(){
-        this.getCategory();  
-        // this.getSubcategory();
+        this.getCategory()
+        // this.getSubcategory()
         // this.getSubcategory(this.categoryList.maitKey);
+    },
+    updated(){
+        this.getSubcategory()
     },
     methods:{
         // 请求分类信息
@@ -43,12 +46,16 @@ export default {
                 
             })
         },
-        getSubcategory(index){
-            let maitKey = this.categoryList[index].maitKey
+        getSubcategory(){
+            let maitKey = this.categoryList[this.currentIndex].maitKey
             getSubcategory(maitKey).then(res=>{
                 this.categoryContent = res.data.list
             })
         },
+        categoryChange(index){
+            this.currentIndex = index;
+            this.getSubcategory();
+        }
         }
     
 }
@@ -73,7 +80,6 @@ export default {
 .nav-bar {
     position: relative;
     background-color: var(--color-tint);
-    font-weight: 700;
     color: #fff;
     z-index: 9;
   }

@@ -34,7 +34,6 @@
   .nav-bar {
     position: relative;
     background-color: var(--color-tint);
-    font-weight: 700;
     color: #fff;
     z-index: 99;
   }

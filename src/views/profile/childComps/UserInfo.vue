@@ -8,7 +8,7 @@
       </slot>
       <div class="login-info left">
         <slot name="user-nickname">
-          <div>登录/注册</div>
+          <div class="login">登录/注册</div>
         </slot>
         <div class="phone">
           <span>
@@ -56,10 +56,12 @@
     color: #fff;
     margin: 10px 0 0 10px;
   }
-
+  #user-info .login-info .login{
+    width: 100px;
+  }
   #user-info .login-info .phone {
     position: relative;
-
+    width: 100px;
     font-size: 13px;
     margin-top: 5px;
     margin-left: 15px;

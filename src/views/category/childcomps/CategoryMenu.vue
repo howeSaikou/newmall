@@ -24,9 +24,7 @@ export default {
           }
       }
   },
-  created(){
-    this.$emit('getSubcategory',this.currentIndex)
-  },
+
   methods:{
       itemClick(index){
           this.currentIndex = index;

@@ -1,6 +1,6 @@
 <template>
   <div id="profile">
-    <nav-bar class="nav-bar"><div slot="center">小码哥商城</div></nav-bar>
+    <nav-bar class="nav-bar"><template v-slot:center>商城</template></nav-bar>
     <!--1.单独封装一个组件: 利用slot知识点-->
     <UserInfo></UserInfo>
 
@@ -69,7 +69,6 @@ import NavBar from '../../components/common/navbar/NavBar.vue'
 
   .nav-bar {
     background-color: var(--color-tint);
-    font-weight: 700;
     color: #fff;
   }
 

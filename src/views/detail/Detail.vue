@@ -13,6 +13,7 @@
       </scroll>
       <back-top @click="backClick" v-show="isShowBackTop"></back-top>
       <detail-bottom-bar @addToCart="addToCart"/>
+      <toast :message="message" :show="show" />
   </div>
 </template>
 
@@ -28,11 +29,13 @@ import DetailParamInfo from './childcomps/DetailParamInfo.vue'
 import DetailCommentInfo from './childcomps/DetailCommentInfo.vue'
 import GoodsList from '../../components/content/goods/GoodsList.vue'
 import DetailBottomBar from './childcomps/DetailBottomBar.vue'
+import Toast from '../../components/common/toast/Toast.vue'
 
 // 根据iid请求详情数据
 import {getDetail,Goods,Shop,GoodsParam,getRecommend} from 'network/detail'
 import BackTop from '../../components/content/backtop/BackTop.vue'
 
+import { mapActions } from 'vuex'
 export default {
   name:"Detail",
   data(){
@@ -40,6 +43,8 @@ export default {
           iid:null,
           goods:{},
           shop:{},
+          show:false,
+          message:'',
           topImages:[],
           detailInfo:{},
           paramInfo:{},
@@ -62,9 +67,11 @@ export default {
     DetailCommentInfo,
     GoodsList,
     DetailBottomBar,
-    BackTop 
+    BackTop,
+    Toast 
     },
   methods:{
+    ...mapActions(['addCart']),
     detailImgLoad(){
       this.$refs.detailScroll.refresh()
       this.getThemeTopY()
@@ -87,16 +94,23 @@ export default {
       }
     },
     addToCart(){
-      // 获取购物车要展示的信息
+      // 1.获取购物车要展示的信息
       const product = {}
       product.image = this.topImages[0];
       product.title = this.goods.title;
       product.desc = this.goods.desc;
       product.price = this.goods.realPrice;
       product.iid = this.iid;
-      // 将商品添加到购物车里
+      // 2.将商品添加到购物车里(1.使用Promise 2.使用vuex 的 mapActions 方法)
       // this.$store.commit('addCart',product) 放数据到mutations
-      this.$store.dispatch('addCart',product)
+      // this.$store.dispatch('addCart',product)
+      this.addCart(product).then(res=>{
+        this.show = true;
+        this.message = res;
+        setTimeout(()=>{
+          this.show = false
+        },1000)
+      })
     }
   },
   created(){

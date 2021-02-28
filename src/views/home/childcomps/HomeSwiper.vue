@@ -1,15 +1,17 @@
 <template>
-  <swiper>
-        <swiper-item v-for="item in banners" :key="item">
-          <a :href="item.link">
+  <div class="block">
+    <el-carousel trigger="click" height="150px" >
+      <el-carousel-item class="swiper-item" v-for="item in banners" :key="item">
+        <a :href="item.link">
             <img :src="item.image" alt="" @load="imgLoad">
-          </a>
-        </swiper-item>
-  </swiper>
+        </a>
+      </el-carousel-item>
+    </el-carousel>
+  </div>
 </template>
 
 <script>
-import {Swiper,SwiperItem} from 'components/common/swiper'
+
 export default {
     props:{
         banners:{
@@ -24,9 +26,7 @@ export default {
         isLoad:false
       }
     },
-    components:{
-        Swiper,SwiperItem
-    },
+
     methods:{
       imgLoad(){
         if(!this.isLoad){
@@ -39,5 +39,8 @@ export default {
 </script>
 
 <style>
-
+.swiper-item img{
+  width: 100%;
+  height: 150px;
+}
 </style>
