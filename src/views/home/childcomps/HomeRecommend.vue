@@ -22,21 +22,23 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 .recommend{
     display: flex;
     width: 100%;
     text-align: center;
     padding: 10px 0 20px;
     border-bottom: 10px solid #eee;
-}
-.recommend-item{
+    .recommend-item{
     flex: 1;
     font-size: 14px;
-}
-.recommend-item img{
+    & img{
     width: 70px;
     height: 70px;
     margin-bottom: 10px;
 }
+}
+}
+
+
 </style>

@@ -61,7 +61,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .category-container{
     display: flex;
 }

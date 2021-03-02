@@ -57,7 +57,7 @@ import {mapGetters} from 'vuex'
 	}
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   .bottom-menu {
     width: 100%;
     height: 44px;
@@ -71,22 +71,18 @@ import {mapGetters} from 'vuex'
     line-height: 44px;
     padding-left: 35px;
     box-sizing: border-box;
-  }
-
-  .bottom-menu .select-all {
+    .select-all {
     position: absolute;
     line-height: 0;
     left: 12px;
     top: 13px;
   }
-
-  .bottom-menu .total-price {
+    .total-price {
     margin-left: 15px;
     font-size: 16px;
     color: #666;
   }
-
-  .bottom-menu .buy-product {
+    .buy-product {
     background-color: orangered;
     color: #fff;
     width: 100px;
@@ -94,5 +90,6 @@ import {mapGetters} from 'vuex'
     text-align: center;
     line-height: 44px;
     float: right;
+  }
   }
 </style>

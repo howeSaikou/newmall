@@ -31,21 +31,20 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 .paramInfo{
     padding: 10px 15px;
     font-size: 14px;
     border-bottom: 5px solid #f2f5f8;
-}
-.info-sizes{
+    .info-sizes{
     width: 100%;
     /* border-collapse: collapse; */
-}
-.info-sizes tr{
+    tr{
     height: 42px;
-}
-.info-sizes tr td{
+    td{
     border-bottom: 1px solid rgba(100,100,100,.1);
+}
+}
 }
 .disclaimer{
     color: #eb4868;
@@ -53,20 +52,21 @@ export default {
 }
 .info-sets{
     margin-bottom: 20px;
-}
-.info-sets .key{
+    .key{
     width: 95px;
 }
-.info-sets tr{
-    height: 42px;
-}
-.info-sets .value{
+    tr{
+        height: 42px;
+        td{
+            border-bottom: 1px solid rgba(100,100,100,.1);
+        }
+    }
+    .value{
     color: #eb4868
 }
-.info-sets tr td{
-    border-bottom: 1px solid rgba(100,100,100,.1);
+    img{
+        width: 100%;
+    }
 }
-.info-img img{
-    width: 100%;
 }
 </style>

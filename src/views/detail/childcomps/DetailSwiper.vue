@@ -1,6 +1,6 @@
 <template>
   <div class="block">
-    <el-carousel trigger="click" indicator-position="none" autoplay="true" arrow="always">
+    <el-carousel trigger="click" indicator-position="none" :autoplay="true" arrow="always">
       <el-carousel-item class="D-swiper-item" v-for="item in topImages" :key="item">
         <img :src="item" alt="">
       </el-carousel-item>
@@ -22,12 +22,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .D-swiper-item {
     height: 300px;
+    
 }
 .D-swiper-item img{
     width: 100%;
 }
-
 </style>

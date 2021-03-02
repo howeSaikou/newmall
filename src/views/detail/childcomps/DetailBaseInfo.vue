@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 .base-info{
     margin-top: 15px;
     padding: 0 8px;
@@ -45,17 +45,16 @@ export default {
 }
 .info-price{
     margin-top: 10px;
-}
-.info-price .new-price{
+    .new-price{
     margin-right: 5px;
     font-size: 24px;
     color: var(--color-high-text);
 }
-.info-price .old-price{
+    .old-price{
     font-size: 13px;
     text-decoration: line-through;
 }
-.info-price .discount{
+    .discount{
     font-size: 12px;
     color: white;
     border-radius: 8px;
@@ -65,6 +64,7 @@ export default {
     /*让元素上浮一些: 使用相对定位即可*/
     position: relative;
     top: -8px;
+}
 }
 .other-info{
     margin-top: 15px;
@@ -78,15 +78,15 @@ export default {
     display: flex;
     justify-content: space-between;
     line-height: 60px;
-}
-.services-info img{
+    img{
     width: 14px;
     height: 14px;
     position: relative;
     top: 2px;
 }
-.services-info span{
+    span{
     font-size: 13px;
     color: #333;
+}
 }
 </style>

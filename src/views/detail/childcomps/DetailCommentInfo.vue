@@ -43,8 +43,8 @@ export default {
     }
 }
 </script>
-
-<style>
+ 
+<style lang="less" scoped>
 .comment-info{
     padding: 0 10px 15px 10px;
 }
@@ -54,37 +54,36 @@ export default {
     line-height: 54px;
     justify-content: space-between;
     border-bottom: 2px solid  rgba(100,100,100,.1);
-}
-.comment-header .arrow{
+    .arrow{
     font-size: 20px;
     margin-left: 2px;
+}
 }
 .comment-user{
     display: flex;
     margin: 10px 0;
     align-items: center;
-}
-.comment-user img{
+    img{
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
-.comment-user .comment-name{
+    .comment-name{
     margin-left: 10px;
     color: #333;
 }
+}
 .comment-detail{
     font-size: 14px; 
-}
-.comment-detail .comment-content{
+    .comment-content{
     padding: 5px 0;
-    
 }
-.comment-detail .detail-other{
+    .detail-other{
     padding: 5px 0 10px 0;
 }
-.comment-detail .detail-other .date{
+    .detail-other .date{
     margin-right: 5px;
+}
 }
 .comment-img img{
     width: 64px;

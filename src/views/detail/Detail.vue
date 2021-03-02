@@ -174,26 +174,27 @@ export default {
       this.themeTopYs.push(Number.MAX_VALUE)
 
       console.log(this.themeTopYs);
-    })
+    },1000)
   }
     
     
 }
 </script>
-
-<style scoped>
+<style lang="less" scoped>
 #detail{
   height: 100vh;
   background-color: #fff;
   position: relative;
   z-index: 9;
+  .detail-nav-bar{
+  position: relative;
+  background-color: #fff;
+  z-index: 9;
+  
 }
 .content{
   height: calc(100% - 44px - 49px);
 }
-.detail-nav-bar{
-  position: relative;
-  background-color: #fff;
-  z-index: 9;
 }
 </style>
+

@@ -51,7 +51,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 .goodsInfo{
     padding: 20px 0;
     border-bottom: 5px solid #f2f5f8;
@@ -63,19 +63,19 @@ export default {
 .desc{
     padding: 15px 0;
 }
-.info-desc .start, .info-desc .end {
+.info-desc{
+    .start, .end {
     width: 90px;
     height: 1px;
     background-color: #a5a3a3;
     position: relative;
 }
-
-.info-desc .start {
+    .start {
     float: left;
 }
-
-.info-desc .end {
+    .end {
     float: right;
+}
 }
 
 .info-desc .start::before, .info-desc .end::after {

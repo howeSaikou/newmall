@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .title{
     display: flex;
 }

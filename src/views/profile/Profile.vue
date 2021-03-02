@@ -62,7 +62,7 @@ import NavBar from '../../components/common/navbar/NavBar.vue'
 	}
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   #profile {
     background-color: #f2f2f2;
   }
@@ -81,22 +81,17 @@ import NavBar from '../../components/common/navbar/NavBar.vue'
     background-color: #fff;
     margin-right: 1px;
     text-align: center;
-  }
-
-  .account-item:last-of-type {
-    margin-right: 0;
-  }
-
-  .account-item {
     color: #666;
     font-size: 13px;
     padding: 18px;
+    &:last-of-type {
+    margin-right: 0;
   }
-
-  .account-item .balance {
+    .balance {
     font-size: 24px;
     font-weight: 700;
     color: #ff5f3e;
+  }
   }
 
   .account-info {

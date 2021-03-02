@@ -25,7 +25,7 @@
 	}
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   #cart {
     /*position: relative;*/
     height: 100vh;

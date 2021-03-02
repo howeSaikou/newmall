@@ -40,7 +40,7 @@ import CheckButton from './CheckButton.vue';
   }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   #shop-item {
     width: 100%;
     display: flex;
@@ -64,14 +64,14 @@ import CheckButton from './CheckButton.vue';
 
   .item-img {
     padding: 5px;
-  }
-
-  .item-img img {
+    img {
     width: 80px;
     height: 100px;
     display: block;
     border-radius: 5px;
   }
+  }
+
 
   .item-info {
     font-size: 17px;
@@ -93,9 +93,8 @@ import CheckButton from './CheckButton.vue';
     bottom: 10px;
     left: 10px;
     right: 10px;
-  }
-
-  .info-bottom .item-price {
+    .item-price {
     color: orangered;
+  }
   }
 </style>

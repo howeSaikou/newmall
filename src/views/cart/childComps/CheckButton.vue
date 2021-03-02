@@ -26,7 +26,7 @@
 	}
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   .check-button {
     position: relative;
     margin: 0;

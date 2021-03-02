@@ -29,7 +29,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .item-info-container{
     width: 100%;
     height: 100%;
@@ -39,19 +39,19 @@ export default {
 .item-info{
     margin-top: 10px;
     width: 50%;
+    img{
+    width: 50px;
+    height: 50px;
 }
-.item-info a{
+    a{
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 14px;
     text-align: center;
 }
+}
 .image{
     margin-bottom: 5px;
-}
-.item-info img{
-    width: 50px;
-    height: 50px;
 }
 </style>

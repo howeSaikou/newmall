@@ -135,12 +135,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 #home{
   height: 100vh;
   position: relative;
-}
-.home-nav{
+  .home-nav{
   /* 这是为了原生滚动时,不跟随才设置fixed,现在用better-scroll不需要 */
   /* position: fixed;
   left: 0;
@@ -154,7 +153,6 @@ export default {
   position: relative;
   z-index: 9;
 }
-
 .content{
   position: absolute;
   top: 44px;
@@ -163,4 +161,9 @@ export default {
   right: 0;
   overflow: hidden;
 }
+}
+
+
+
+
 </style>

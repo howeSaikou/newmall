@@ -34,7 +34,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 .category-menu{
     display: flex;
     flex-direction: column;
@@ -50,11 +50,11 @@ export default {
     font-size: 14px;
     background-color: #f6f6f6;
     border-bottom: solid 1px #fff;
-}
-.menu-item.active {
+    active {
     font-weight: 700;
     color: var(--color-high-text);
     background-color: #fff;
     border-left: 3px solid var(--color-high-text);
   }
+}
 </style>

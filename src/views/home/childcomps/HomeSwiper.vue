@@ -38,7 +38,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 .swiper-item img{
   width: 100%;
   height: 150px;

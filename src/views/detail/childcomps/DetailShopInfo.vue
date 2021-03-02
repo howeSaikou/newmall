@@ -51,66 +51,67 @@ export default {
 }
 </script>
 
-<style>
+
+<style lang="less">
 .shop-info {
     padding: 25px 8px;
     border-bottom: 5px solid #f2f5f8;
-}
-.shop-top{
+    .shop-top{
     line-height: 45px;
     /* 让元素垂直中心对齐 */
     display: flex;
     align-content: center;
+        .shop-logo{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, .1);
+    }
+        .shop-name{
+            margin-left: 10px;
+        }
 }
-.shop-logo{
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, .1);
-}
-.shop-name{
-    margin-left: 10px;
-}
-.shop-middle{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.shop-middle-item{
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-evenly;
-    flex: 1;
-}
-.shop-middle-left{
-    text-align: center;
-    border-right: 2px solid rgba(0, 0, 0, .1);
-}
-.sells-count, .goods-count{
-    font-size: 18px;
-}
-.sells-text, .goods-text{
-    margin-top: 10px;
-    font-size: 12px;
-}
-.shop-middle-right {
-    font-size: 13px;
-    color: #333;
-}
-.shop-middle-right table{
-    width: 120px;
-}
-.shop-middle-right table td{
-    padding: 5px 0;
-}
-.better span{
-    color: white;
-    text-align: center;
-    background-color: #5ea732;
-}
-.score{
-    color: #5ea732;
-
+    .shop-middle{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .shop-middle-item{
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        flex: 1;
+    }
+        .shop-middle-left{
+        text-align: center;
+        border-right: 2px solid rgba(0, 0, 0, .1);
+            .sells-count, .goods-count{
+                font-size: 18px;
+            }
+            .sells-text, .goods-text{
+                margin-top: 10px;
+                font-size: 12px;
+            }
+    }
+        .shop-middle-right {
+            font-size: 13px;
+            color:#333;
+            table{
+                width: 120px;
+                td{
+                    padding: 5px 0;
+                }
+                .better span{
+                    color: white;
+                    text-align: center;
+                    background-color: #5ea732;
+                }
+                .score{
+                    color: #5ea732;
+                    
+                }
+            }
+        }
+    }
 }
 .score-better{
     color: #f13e3a;
@@ -121,8 +122,7 @@ export default {
 .shop-bottom{
     text-align: center;
     margin-top: 10px;
-}
-.enter-shop {
+    .enter-shop {
     display: inline-block;
     font-size: 14px;
     background-color: #f2f5f8;
@@ -131,5 +131,6 @@ export default {
     text-align: center;
     line-height: 30px;
     border-radius: 10px;
+}
 }
 </style>

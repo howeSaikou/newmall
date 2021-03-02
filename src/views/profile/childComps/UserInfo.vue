@@ -28,51 +28,43 @@
 	}
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   #user-info {
     background-color: var(--color-tint);
     padding: 15px;
     margin-top: -5px;
-  }
-
-  #user-info .privateImage-svg {
+    .privateImage-svg {
     width: 60px;
     height: 60px;
     background-color: #fff;
     border-radius: 30px;
   }
-
-  .left {
-    float: left;
-  }
-
-  #user-info .arrow-svg {
+    .arrow-svg {
     width: 11px;
     height: 22px;
     margin-top: 18px;
   }
-
-  #user-info .login-info {
+    .login-info {
     color: #fff;
     margin: 10px 0 0 10px;
-  }
-  #user-info .login-info .login{
+    .login{
     width: 100px;
   }
-  #user-info .login-info .phone {
+    .phone {
     position: relative;
     width: 100px;
     font-size: 13px;
     margin-top: 5px;
     margin-left: 15px;
     font-weight: 300;
-  }
-
-  #user-info .login-info .phone .icon-mobile {
+    .icon-mobile {
     position: absolute;
     width: 12px;
     height: 18px;
     left: -15px;
     top: 0px;
+  }
+  }
+  }
   }
 </style>
